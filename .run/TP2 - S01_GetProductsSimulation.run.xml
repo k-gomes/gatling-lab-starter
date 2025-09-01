@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="S02_GetProductByIDSimulation" type="MavenRunConfiguration" factoryName="Maven">
+  <configuration default="false" name="TP2 - S01_GetProductsSimulation" type="MavenRunConfiguration" factoryName="Maven">
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings" />
@@ -12,7 +12,7 @@
           <option name="goals">
             <list>
               <option value="gatling:test" />
-              <option value="-Dgatling.simulationClass=com.gatlinglab.tp1.S02_GetProductByIDSimulation" />
+              <option value="-Dgatling.simulationClass=com.gatlinglab.tp2.S01_GetProductsSimulation" />
             </list>
           </option>
           <option name="multimoduleDir" />

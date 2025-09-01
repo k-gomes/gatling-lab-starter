@@ -1,0 +1,32 @@
+package com.gatlinglab.tp2;
+
+import io.gatling.javaapi.core.ScenarioBuilder;
+import io.gatling.javaapi.core.Simulation;
+
+import static com.gatlinglab.tp2.utils.HttpUtils.getHttpAssertions;
+import static com.gatlinglab.tp2.utils.HttpUtils.getHttpProtocol;
+import static io.gatling.javaapi.core.CoreDsl.*;
+import static io.gatling.javaapi.http.HttpDsl.http;
+
+public class S03_GetProductsByCategorySimulation extends Simulation {
+
+    ScenarioBuilder scn = scenario("Get products by category")
+            .exec(
+                    http("Get products by category")
+                            .get("/products/search")
+                            .queryParam("category", "Category-1")
+                            .check(
+                                    jsonPath("$[*].category").findAll().transform(categories ->
+                                            categories.stream().allMatch(cat -> cat.equals("Category-1"))
+                                    ).is(true)
+                            )
+            );
+
+    {
+        setUp(
+                scn.injectOpen(atOnceUsers(1))
+        )
+                .protocols(getHttpProtocol())
+                .assertions(getHttpAssertions());
+    }
+}
