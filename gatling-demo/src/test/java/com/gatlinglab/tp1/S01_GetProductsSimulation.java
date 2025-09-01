@@ -1,4 +1,4 @@
-package com.gatlinglab;
+package com.gatlinglab.tp1;
 
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.*;
