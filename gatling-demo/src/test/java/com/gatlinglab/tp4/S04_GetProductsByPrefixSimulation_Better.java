@@ -3,7 +3,8 @@ package com.gatlinglab.tp4;
 import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 
-import static com.gatlinglab.utils.FeederUtils.*;
+import static com.gatlinglab.utils.FeederUtils.buildJsonFeederPrefixes;
+import static com.gatlinglab.utils.FeederUtils.buildRandomFeederProperty;
 import static com.gatlinglab.utils.HttpUtils.getHttpAssertions;
 import static com.gatlinglab.utils.HttpUtils.getHttpProtocol;
 import static io.gatling.javaapi.core.CoreDsl.atOnceUsers;
@@ -14,7 +15,7 @@ public class S04_GetProductsByPrefixSimulation_Better extends Simulation {
 
     public ScenarioBuilder scn = scenario("Get products by prefix")
             .feed(buildJsonFeederPrefixes())
-            .feed(buildRandomFeederProperty("size",1000))
+            .feed(buildRandomFeederProperty("size", 1000))
 // DEBUG - Verifier le fonctionnement du feeder
 //            .exec(
 //                    session -> {

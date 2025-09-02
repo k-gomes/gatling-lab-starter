@@ -3,11 +3,11 @@ package com.gatlinglab.tp4;
 import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 
-import static com.gatlinglab.utils.FeederUtils.buildJsonFeederPrefixes;
 import static com.gatlinglab.utils.FeederUtils.buildJsonFeederPrefixesSize;
 import static com.gatlinglab.utils.HttpUtils.getHttpAssertions;
 import static com.gatlinglab.utils.HttpUtils.getHttpProtocol;
-import static io.gatling.javaapi.core.CoreDsl.*;
+import static io.gatling.javaapi.core.CoreDsl.atOnceUsers;
+import static io.gatling.javaapi.core.CoreDsl.scenario;
 import static io.gatling.javaapi.http.HttpDsl.http;
 
 public class S04_GetProductsByPrefixSimulation extends Simulation {
