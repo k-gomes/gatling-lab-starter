@@ -3,14 +3,14 @@ package com.gatlinglab.tp2;
 import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 
-import static com.gatlinglab.tp2.utils.HttpUtils.getHttpAssertions;
-import static com.gatlinglab.tp2.utils.HttpUtils.getHttpProtocol;
+import static com.gatlinglab.utils.HttpUtils.getHttpAssertions;
+import static com.gatlinglab.utils.HttpUtils.getHttpProtocol;
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.http;
 
 public class S04_GetProductsByPrefixSimulation extends Simulation {
 
-    ScenarioBuilder scn = scenario("Get products by prefix")
+    public ScenarioBuilder scn = scenario("Get products by prefix")
             .exec(
                     http("Get products by prefix")
                             .get("/products/search-by-name")

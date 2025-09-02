@@ -3,14 +3,14 @@ package com.gatlinglab.tp2;
 import io.gatling.javaapi.core.ScenarioBuilder;
 import io.gatling.javaapi.core.Simulation;
 
-import static com.gatlinglab.tp2.utils.HttpUtils.getHttpAssertions;
-import static com.gatlinglab.tp2.utils.HttpUtils.getHttpProtocol;
+import static com.gatlinglab.utils.HttpUtils.getHttpAssertions;
+import static com.gatlinglab.utils.HttpUtils.getHttpProtocol;
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.http;
 
 public class S02_GetProductByIDSimulation extends Simulation {
 
-    ScenarioBuilder scn = scenario("Get product by id")
+    public ScenarioBuilder scn = scenario("Get product by id")
             .exec(
                     http("Get product by id")
                             .get("/products/1")

@@ -1,4 +1,4 @@
-package com.gatlinglab.tp2.utils;
+package com.gatlinglab.utils;
 
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
