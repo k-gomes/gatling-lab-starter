@@ -1,0 +1,11 @@
+[
+  {"prefix": "Pro", "size" : 30},
+  {"prefix": "Prod", "size" : 40},
+  {"prefix": "Produ", "size" : 50},
+  {"prefix": "Produc", "size" : 60},
+  {"prefix": "Product", "size" : 70},
+  {"prefix": "Product ", "size" : 80},
+  {"prefix": "Product 1", "size" : 90},
+  {"prefix": "Product 10", "size" : 100},
+  {"prefix": "Product 100", "size" : 110}
+]
