@@ -1,5 +1,7 @@
 package com.gatlinglab.tp2.utils;
 
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
 import io.gatling.javaapi.core.Assertion;
 import io.gatling.javaapi.core.ProtocolBuilder;
 
@@ -12,8 +14,11 @@ import static io.gatling.javaapi.http.HttpDsl.http;
 public class HttpUtils {
 
     public static ProtocolBuilder getHttpProtocol() {
+
+        Config config = ConfigFactory.load("configuration.properties");
+
         return http
-                .baseUrl("http://localhost:8080")
+                .baseUrl(config.getString("http.url"))
                 .acceptHeader("application/json");
     }
 
