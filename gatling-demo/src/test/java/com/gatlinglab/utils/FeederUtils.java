@@ -29,15 +29,15 @@ public class FeederUtils {
     }
 
     public static FeederBuilder.Batchable<String> buildCsvFeederCategory() {
-        return  csv("tp4/categories.csv").random();
+        return csv("tp4/categories.csv").random();
     }
 
     public static FeederBuilder.FileBased<Object> buildJsonFeederPrefixesSize() {
-        return  jsonFile("tp4/prefixes_size.json").random();
+        return jsonFile("tp4/prefixes_size.json").random();
     }
 
     public static FeederBuilder.FileBased<Object> buildJsonFeederPrefixes() {
-        return  jsonFile("tp4/prefixes.json").random();
+        return jsonFile("tp4/prefixes.json").random();
     }
 
     // Feeder random pour la size
