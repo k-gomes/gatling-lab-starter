@@ -6,16 +6,16 @@ import static io.gatling.javaapi.http.HttpDsl.*;
 import io.gatling.javaapi.core.*;
 import io.gatling.javaapi.http.*;
 
-public class S01_GetProductsSimulation extends Simulation {
+public class SXX_ExempleSimulation extends Simulation {
 
     HttpProtocolBuilder httpProtocol = http
-            .baseUrl("http://localhost:8080")
+            .baseUrl("http://HOST:PORT")
             .acceptHeader("application/json");
 
-    ScenarioBuilder scn = scenario("Get products")
+    ScenarioBuilder scn = scenario("SCENARIO NAME")
             .exec(
-                    http("Get products")
-                            .get("/products")
+                    http("REQUEST NAME")
+                            .get("/ENDPOINT")
             );
 
     {
