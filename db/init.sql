@@ -13,5 +13,5 @@ SELECT
     'Category-' || (i % 100),
     'Description for product ' || i,
     ROUND((random() * 1000)::numeric, 2)
-FROM generate_series(1, 50000) AS s(i);
+FROM generate_series(1, 500000) AS s(i);
 
